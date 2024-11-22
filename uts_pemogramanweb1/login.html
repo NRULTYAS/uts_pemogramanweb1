@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="menu.html">Yunshii Garage!</a>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Login Akun</h1>
+        <form id="loginForm" class="mx-auto" style="max-width: 400px;">
+
+            <div class="mb-3">
+                <label for="loginUsername" class="form-label">Username</label>
+                <input type="text" id="loginUsername" class="form-control" placeholder="Masukkan username" required>
+            </div>
+
+
+            <div class="mb-3">
+                <label for="loginPassword" class="form-label">Password</label>
+                <input type="password" id="loginPassword" class="form-control" placeholder="Masukkan password" required>
+            </div>
+
+
+            <button type="submit" class="btn btn-primary w-100">Login</button>
+        </form>
+    </div>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        &copy; 2024 Yunshii Garage
+    </footer>
+
+    <script>
+
+      document.getElementById("loginForm").addEventListener("submit", function (e) {
+          e.preventDefault();
+  
+ 
+          const username = document.getElementById("loginUsername").value;
+          const password = document.getElementById("loginPassword").value;
+  
+
+          const staticUsername = "yuyun"; 
+          const staticPassword = "12345678";  
+  
+
+          if (username === staticUsername && password === staticPassword) {
+              alert("Login berhasil!");
+              window.location.href = "menu.html"; 
+          } else {
+              alert("Username atau password salah!");
+          }
+      });
+  </script>
+  
+</body>
+</html>
